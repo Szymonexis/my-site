@@ -1,0 +1,41 @@
+{
+	"INTRO": {
+		"FIRST": "HELLO THERE :3",
+		"SECOND": "MY NAME IS SIMON",
+		"THIRD": { "TEXT": "I AM A", "COLORFUL": "SOFTWARE DEVELOPER" },
+		"MEET_ME_BUTTON": "MEET ME"
+	},
+	"ABOUT_ME": {
+		"HEADERS": {
+			"TITLE": "About Me",
+			"INTRO": "Intro",
+			"JOBS_OVERVIEW": "Jobs Overview",
+			"MY_INTERESTS": "My Interests"
+		},
+		"TEXTS": {
+			"0": "I am a software developer from Poland mainly focusing in web technologies. I have finnished my bachelors in Data Analysis and Computer Science at University of Lodz in 2022 and I am in progress of working on my Masters. I have been working as a software developer for around { sinceYears } years now.",
+			"1": "I love my job and the studies I chose :) - creating cool stuff puts a smile on my face. You can find some of my work on my",
+			"2": ". To find out more about my experience you can visit my",
+			"3": ".",
+			"4": "My first job related to software developement was at",
+			"5": " - a commercial banking company operating from Poland, it's a fourth biggest bank in Poland.",
+			"6": "I was working there as an Intern Backend Developer in Java and Python focusing mainly on expanding the existing forms and transactions pipelines for private customers.",
+			"7": "My next, and current job, was at",
+			"8": ". It's a medium-sized software house operating from Poland. They carried out couple of their own projects but their main focus is outsourceing developers to other companies and government institutions. Their biggest client so far is",
+			"9": ". WPP is the largest advertising company (as of 2019).",
+			"10": "While working for Digimonkeys.com, I was a part of a team creating their startup -",
+			"11": ". I worked there with React-Native, Angular 12, Nest.js, GCP, PostgreSQL, Python and GCP.",
+			"12": "At WPP I am currently working on data analysis solutions for their clients as well as maintaining old apps and internal libraries. I am a frontend developer there, working in Angular2+, D3.js, Chart.js, NgRX (with Store) and Angular Material (creating our own material-based components). To find out more about this job and others, visit the",
+			"13": " tab.",
+			"14": ""
+		},
+		"LINKS": {
+			"GITHUB": "GitHub",
+			"LINKEDIN": "LinkedIn",
+			"MBANK": "mBank",
+			"DIGIMONKEYS": "Digimonkeys.com",
+			"WPP": "WPP plc",
+			"DRHAIRCARE": "Dr. Haircare"
+		}
+	}
+}

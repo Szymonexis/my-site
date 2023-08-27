@@ -1,0 +1,8 @@
+{
+	"INTRO": {
+		"FIRST": "HELLO THERE :3",
+		"SECOND": "MY NAME IS SIMON",
+		"THIRD": { "TEXT": "I AM A", "COLORFUL": "SOFTWARE DEVELOPER" },
+		"MEET_ME_BUTTON": "MEET ME"
+	}
+}
