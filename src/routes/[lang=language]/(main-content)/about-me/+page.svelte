@@ -5,12 +5,13 @@
 	import TranslateText from '$lib/components/translate-text.svelte';
 	import { routes } from '$lib/routes';
 	import { page } from '$app/stores';
+	import { capitalize } from '$lib';
 
 	const { lang } = $page.params;
 
 	const links = {
 		github: { link: 'https://github.com/Szymonexis', text: 'ABOUT_ME.LINKS.GITHUB' },
-		thisSite: { link: 'https://github.com/Szymonexis', text: 'ABOUT_ME.LINKS.GITHUB' },
+		thisSite: { link: 'https://github.com/Szymonexis/my-site', text: 'ABOUT_ME.LINKS.GITHUB' },
 		linkedIn: {
 			link: 'https://www.linkedin.com/in/szymon-kaszuba-ga%C5%82ka-394599200/',
 			text: 'ABOUT_ME.LINKS.LINKEDIN'
@@ -20,18 +21,6 @@
 		wpp: { link: 'https://www.wpp.com/', text: 'ABOUT_ME.LINKS.WPP' },
 		drHaircare: { link: 'https://dr-haircare.pl/', text: 'ABOUT_ME.LINKS.DRHAIRCARE' }
 	};
-
-	function capitalize(text: string): string {
-		return text
-			.split(' ')
-			.map((word) =>
-				word
-					.split('')
-					.map((c, i) => (i === 0 ? c.toUpperCase() : c.toLowerCase()))
-					.join('')
-			)
-			.join(' ');
-	}
 
 	function getSinceYears(): number {
 		const softwareDeveloperStartTimestamp = new Date(2021, 5).getTime();
@@ -44,9 +33,9 @@
 </script>
 
 <img class="my-photo" src={myPhotoLinkedin} alt="Szymon Kaszuba-Galka" />
-<h1><TranslateText key="ABOUT_ME.HEADERS.TITLE" {lang} /></h1>
+<h1><TranslateText key="ABOUT_ME.HEADERS.TITLE" {lang} capitalizeText={true} /></h1>
 
-<h2><TranslateText key="ABOUT_ME.HEADERS.INTRO" {lang} /></h2>
+<h2><TranslateText key="ABOUT_ME.HEADERS.INTRO" {lang} capitalizeText={true} /></h2>
 
 <p>
 	<TranslateText key="ABOUT_ME.TEXTS.0" {lang} variables={{ sinceYears: getSinceYears() }} />
@@ -64,25 +53,21 @@
 	<TranslateText key="ABOUT_ME.TEXTS.3" {lang} />
 </p>
 
-<h2><TranslateText key="ABOUT_ME.HEADERS.MY_INTERESTS" {lang} /></h2>
+<h2><TranslateText key="ABOUT_ME.HEADERS.MY_INTERESTS" {lang} capitalizeText={true} /></h2>
 
 <p>
-	Even though my professional background is small, I tend to work on myself in my free time.
-	Recently i have been working on learning Rust and C. My main language while on the university was
-	C++ so these two are really close to home.
+	<TranslateText key="ABOUT_ME.TEXTS.14" {lang} />
 </p>
 
 <p>
-	I think that the best way to learn things is by doing them - thats why this site is written in
-	SvelteKit - a completely new experience to me :3 You can checkout the source code of this website
-	on my
+	<TranslateText key="ABOUT_ME.TEXTS.15" {lang} />
 	<a href={links.thisSite.link}>
 		<TranslateText key={links.thisSite.text} {lang} />
 	</a>
-	.
+	<TranslateText key="ABOUT_ME.TEXTS.16" {lang} />
 </p>
 
-<h2><TranslateText key="ABOUT_ME.HEADERS.JOBS_OVERVIEW" {lang} /></h2>
+<h2><TranslateText key="ABOUT_ME.HEADERS.JOBS_OVERVIEW" {lang} capitalizeText={true} /></h2>
 
 <img class="mBank-logo" src={mBankLogo} alt="mBank logo" />
 

@@ -1,33 +1,36 @@
 {
 	"INTRO": {
-		"FIRST": "HELLO THERE :3",
-		"SECOND": "MY NAME IS SIMON",
-		"THIRD": { "TEXT": "I AM A", "COLORFUL": "SOFTWARE DEVELOPER" },
-		"MEET_ME_BUTTON": "MEET ME"
+		"FIRST": "CZEŚĆ TAM :3",
+		"SECOND": "NAZYWAM SIĘ SIMON",
+		"THIRD": { "TEXT": "JESTEM", "COLORFUL": "PROGRAMISTĄ" },
+		"MEET_ME_BUTTON": "POZNAJ MNIE"
 	},
 	"ABOUT_ME": {
 		"HEADERS": {
-			"TITLE": "About Me",
-			"INTRO": "Intro",
-			"JOBS_OVERVIEW": "Jobs Overview",
-			"MY_INTERESTS": "My Interests"
+			"TITLE": "O mnie",
+			"INTRO": "Wstęp",
+			"JOBS_OVERVIEW": "Przegląd pracy",
+			"MY_INTERESTS": "Moje zainteresowania"
 		},
 		"TEXTS": {
-			"0": "I am a software developer from Poland mainly focusing in web technologies. I have finnished my bachelors in Data Analysis and Computer Science at University of Lodz in 2022 and I am in progress of working on my Masters. I have been working as a software developer for around { sinceYears } years now.",
-			"1": "I love my job and the studies I chose :) - creating cool stuff puts a smile on my face. You can find some of my work on my",
-			"2": ". To find out more about my experience you can visit my",
+			"0": "Jestem programistą z Polski, głównie skupiam się na technologiach internetowych. Ukończyłem studia licencjackie z analizy danych i informatyki na Uniwersytecie Łódzkim w 2022 roku i obecnie pracuję nad magisterką. Pracuję jako programista od około { sinceYears } lat.",
+			"1": "Kocham swoją pracę i studia, które wybrałem :) - tworzenie fajnych rzeczy sprawia mi radość. Moje prace można znaleźć na moim",
+			"2": ". Aby dowiedzieć się więcej o moim doświadczeniu, możesz odwiedzić mój",
 			"3": ".",
-			"4": "My first job related to software developement was at",
-			"5": " - a commercial banking company operating from Poland, it's a fourth biggest bank in Poland.",
-			"6": "I was working there as an Intern Backend Developer in Java and Python focusing mainly on expanding the existing forms and transactions pipelines for private customers.",
-			"7": "My next, and current job, was at",
-			"8": ". It's a medium-sized software house operating from Poland. They carried out couple of their own projects but their main focus is outsourceing developers to other companies and government institutions. Their biggest client so far is",
-			"9": ". WPP is the largest advertising company (as of 2019).",
-			"10": "While working for Digimonkeys.com, I was a part of a team creating their startup -",
-			"11": ". I worked there with React-Native, Angular 12, Nest.js, GCP, PostgreSQL, Python and GCP.",
-			"12": "At WPP I am currently working on data analysis solutions for their clients as well as maintaining old apps and internal libraries. I am a frontend developer there, working in Angular2+, D3.js, Chart.js, NgRX (with Store) and Angular Material (creating our own material-based components). To find out more about this job and others, visit the",
-			"13": " tab.",
-			"14": ""
+			"4": "Moja pierwsza praca związana z programowaniem była w",
+			"5": " - komercyjnym banku działającym z Polski, to czwarty co do wielkości bank w Polsce.",
+			"6": "Pracowałem tam jako stażysta - programista backendowy w Javie i Pythonie, głównie skupiałem się na rozbudowie istniejących formularzy i trasakcji dla klientów indywidualnych.",
+			"7": "Moja następna, i obecna praca, była w",
+			"8": ". To średniej wielkości firma programistyczna działająca z Polski. Realizują kilka własnych projektów, ale głównie skupiają się na outsourcingu programistów do innych firm i instytucji rządowych. Ich największym klientem do tej pory jest",
+			"9": ". WPP to największa firma reklamowa (stan na 2019 rok).",
+			"10": "Pracując dla Digimonkeys.com, byłem częścią zespołu tworzącego ich startup -",
+			"11": ". Pracowałem tam z React-Native, Angular 12, Nest.js, GCP, PostgreSQL, Pythonem i GCP.",
+			"12": "W WPP obecnie pracuję nad rozwiązaniami do analizy danych dla ich klientów, jak również nad utrzymaniem starych aplikacji i wewnętrznych bibliotek. Jestem tam programistą front-endowym, pracuję w Angular2+, D3.js, Chart.js, NgRX (z magazynem) i Angular Material (tworząc nasze własne komponenty oparte na materiale). Aby dowiedzieć się więcej o tej pracy i innych, odwiedź zakładkę",
+			"13": ".",
+			"14": "Mimo małego doświadczenia zawodowego, staram się rozwijać w wolnym czasie. Ostatnio pracowałem nad nauką Rusta i C. Moim głównym językiem na uniwersytecie był C++, więc te dwa są mi bardzo bliskie.",
+			"15": "Myślę, że najlepszym sposobem nauki jest praktyka - dlatego ta strona jest napisana w SvelteKit - to dla mnie zupełnie nowe doświadczenie :3 Kod źródłowy tej strony można znaleźć na moim",
+			"16": ".",
+			"17": ""
 		},
 		"LINKS": {
 			"GITHUB": "GitHub",
