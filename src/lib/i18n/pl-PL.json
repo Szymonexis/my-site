@@ -1,9 +1,9 @@
 {
 	"INTRO": {
-		"FIRST": "CZEŚĆ TAM :3",
-		"SECOND": "NAZYWAM SIĘ SIMON",
-		"THIRD": { "TEXT": "JESTEM", "COLORFUL": "PROGRAMISTĄ" },
-		"MEET_ME_BUTTON": "POZNAJ MNIE"
+		"FIRST": "Cześć :3",
+		"SECOND": "Nazywam się Szymon",
+		"THIRD": { "TEXT": "Jestem", "COLORFUL": "Software Developerem" },
+		"MEET_ME_BUTTON": "Poznaj Mnie"
 	},
 	"ABOUT_ME": {
 		"HEADERS": {

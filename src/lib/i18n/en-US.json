@@ -1,9 +1,9 @@
 {
 	"INTRO": {
-		"FIRST": "HELLO THERE :3",
-		"SECOND": "MY NAME IS SIMON",
-		"THIRD": { "TEXT": "I AM A", "COLORFUL": "SOFTWARE DEVELOPER" },
-		"MEET_ME_BUTTON": "MEET ME"
+		"FIRST": "Hello There :3",
+		"SECOND": "My name is Simon",
+		"THIRD": { "TEXT": "I am a", "COLORFUL": "Software Developer" },
+		"MEET_ME_BUTTON": "Meet me"
 	},
 	"ABOUT_ME": {
 		"HEADERS": {
