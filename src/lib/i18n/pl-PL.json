@@ -1,4 +1,11 @@
 {
+	"ROUTES": {
+		"ABOUT_ME": "o mnie",
+		"JOBS": "praca",
+		"EDUCATION": "edukacja",
+		"SKILLS": "umiejętności",
+		"GALLERY": "galeria"
+	},
 	"INTRO": {
 		"FIRST": "Cześć :3",
 		"SECOND": "Nazywam się Szymon",

@@ -1,7 +1,11 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	import { translate } from '$lib';
 	import NavSection from '$lib/components/nav-section.svelte';
 	import { routes } from '$lib/routes';
 	import { onMount } from 'svelte';
+
+	const { lang } = $page.params;
 
 	onMount(() => {
 		const blob = document.getElementById('blob');
@@ -30,7 +34,9 @@
 
 	<div class="navigation">
 		{#each Object.values(routes) as route, i (i)}
-			<NavSection text={route.text} link={route.link} id={`${i}`} />
+			{#await translate(route.text, lang, {}) then text}
+				<NavSection {text} link={route.link} id={`${i}`} />
+			{/await}
 		{/each}
 	</div>
 

@@ -1,4 +1,11 @@
 {
+	"ROUTES": {
+		"ABOUT_ME": "about me",
+		"JOBS": "jobs",
+		"EDUCATION": "education",
+		"SKILLS": "skills",
+		"GALLERY": "gallery"
+	},
 	"INTRO": {
 		"FIRST": "Hello There :3",
 		"SECOND": "My name is Simon",
