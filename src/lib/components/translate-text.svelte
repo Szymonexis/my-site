@@ -5,7 +5,7 @@
 	export let key = '';
 	export let lang = '';
 	export let variables: TranslationVariables = {};
-	export let capitalizeText = false;
+	export let transformTextFunction: (text: string | null) => string = (text) => text ?? '';
 
 	let text: Promise<string> | null = null;
 
@@ -16,6 +16,6 @@
 
 <span>
 	{#await text then value}
-		{capitalizeText ? capitalize(value) : value}
+		{transformTextFunction ? transformTextFunction(value) : value}
 	{/await}
 </span>
