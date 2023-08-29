@@ -1,7 +1,28 @@
 <script lang="ts">
-	import NavSection from '$lib/components/nav-section.svelte';
-	import { routes } from '$lib/routes';
+	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
+	import { GlobeIcon } from 'svelte-feather-icons';
+
+	import NavSection from '$lib/components/nav-section.svelte';
+	import Select from '$lib/components/select.svelte';
+	import { LANG, translate } from '$lib';
+	import { routes } from '$lib/routes';
+	import type { SelectDetail } from '$lib/types';
+
+	const { lang } = $page.params;
+
+	const languages = Object.values(LANG);
+
+	function onSelectLanguage(event: CustomEvent<SelectDetail<string>>): void {
+		const newLang = event.detail.selectedValue as LANG;
+		const currentPath = $page.url.pathname;
+		const newPath = currentPath.replace(lang, newLang);
+
+		const thisPage = window.location;
+
+		goto(newPath).then(() => thisPage.reload());
+	}
 
 	onMount(() => {
 		const blob = document.getElementById('blob');
@@ -30,7 +51,9 @@
 
 	<div class="navigation">
 		{#each Object.values(routes) as route, i (i)}
-			<NavSection text={route.text} link={route.link} id={`${i}`} />
+			{#await translate(route.text, lang, {}) then text}
+				<NavSection {text} link={route.link} id={`${i}`} />
+			{/await}
 		{/each}
 	</div>
 
@@ -41,9 +64,18 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="footer">
+		<div class="footer__select">
+			<GlobeIcon />
+			<Select values={languages} selected={lang} direction={'up'} on:select={onSelectLanguage} />
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
+	$margin-sides: 1rem;
+
 	#blob {
 		z-index: 0;
 		position: absolute;
@@ -68,12 +100,26 @@
 	}
 
 	.layout {
+		$header-height: 4rem;
 		$footer-height: 4rem;
 		$gap-size: 1rem;
 
 		display: grid;
-		grid-template-rows: $footer-height calc(100dvh - $footer-height - $gap-size);
+		grid-template-rows:
+			$header-height calc(100dvh - $header-height - $gap-size * 2 - $footer-height)
+			$footer-height;
 		gap: $gap-size;
+	}
+
+	.navigation {
+		z-index: 2;
+		height: 100%;
+		width: calc(100% - #{$margin-sides} * 2);
+		border-bottom: 1px solid white;
+		margin: 0 $margin-sides;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 	}
 
 	.scroll {
@@ -84,7 +130,7 @@
 		justify-content: center;
 
 		&__container {
-			width: 65%;
+			width: min(65%, 100rem);
 			text-overflow: wrap;
 		}
 
@@ -93,17 +139,20 @@
 		}
 	}
 
-	.navigation {
-		$margin-sides: 1rem;
-
+	.footer {
 		z-index: 2;
-		height: 100%;
-		width: calc(100% - #{$margin-sides} * 2);
 		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		border-bottom: 1px solid white;
+		width: calc(100% - #{$margin-sides} * 2);
+		border-top: 1px solid white;
 		margin: 0 $margin-sides;
+		flex-direction: row-reverse;
+		align-items: center;
+
+		&__select {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
 	}
 
 	@keyframes rotation {

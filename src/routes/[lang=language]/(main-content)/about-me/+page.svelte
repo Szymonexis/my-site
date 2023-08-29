@@ -33,9 +33,9 @@
 </script>
 
 <img class="my-photo" src={myPhotoLinkedin} alt="Szymon Kaszuba-Galka" />
-<h1><TranslateText key="ABOUT_ME.HEADERS.TITLE" {lang} capitalizeText={true} /></h1>
+<h1><TranslateText key="ABOUT_ME.HEADERS.TITLE" {lang} transformTextFunction={capitalize} /></h1>
 
-<h2><TranslateText key="ABOUT_ME.HEADERS.INTRO" {lang} capitalizeText={true} /></h2>
+<h2><TranslateText key="ABOUT_ME.HEADERS.INTRO" {lang} transformTextFunction={capitalize} /></h2>
 
 <p>
 	<TranslateText key="ABOUT_ME.TEXTS.0" {lang} variables={{ sinceYears: getSinceYears() }} />
@@ -53,7 +53,9 @@
 	<TranslateText key="ABOUT_ME.TEXTS.3" {lang} />
 </p>
 
-<h2><TranslateText key="ABOUT_ME.HEADERS.MY_INTERESTS" {lang} capitalizeText={true} /></h2>
+<h2>
+	<TranslateText key="ABOUT_ME.HEADERS.MY_INTERESTS" {lang} transformTextFunction={capitalize} />
+</h2>
 
 <p>
 	<TranslateText key="ABOUT_ME.TEXTS.14" {lang} />
@@ -67,7 +69,9 @@
 	<TranslateText key="ABOUT_ME.TEXTS.16" {lang} />
 </p>
 
-<h2><TranslateText key="ABOUT_ME.HEADERS.JOBS_OVERVIEW" {lang} capitalizeText={true} /></h2>
+<h2>
+	<TranslateText key="ABOUT_ME.HEADERS.JOBS_OVERVIEW" {lang} transformTextFunction={capitalize} />
+</h2>
 
 <img class="mBank-logo" src={mBankLogo} alt="mBank logo" />
 
@@ -116,7 +120,7 @@
 <p>
 	<TranslateText key="ABOUT_ME.TEXTS.12" {lang} />
 	<a href={routes.JOBS.link}>
-		{capitalize(routes.JOBS.text)}
+		<TranslateText key={routes.JOBS.text} {lang} transformTextFunction={capitalize} />
 	</a>
 	<TranslateText key="ABOUT_ME.TEXTS.13" {lang} />
 </p>
