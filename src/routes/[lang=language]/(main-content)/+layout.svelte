@@ -50,9 +50,9 @@
 	<div id="blob" />
 
 	<div class="navigation">
-		{#each Object.values(routes) as route, i (i)}
-			{#await translate(route.text, lang, {}) then text}
-				<NavSection {text} link={route.link} id={`${i}`} />
+		{#each Object.entries(routes) as route, i (i)}
+			{#await translate(route[1].text, lang, {}) then text}
+				<NavSection {text} link={route[0]} id={`${i}`} />
 			{/await}
 		{/each}
 	</div>

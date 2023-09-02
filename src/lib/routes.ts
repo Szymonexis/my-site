@@ -1,15 +1,15 @@
-export enum ROUTE_NAMES {
-	ABOUT_ME = 'ABOUT_ME',
-	JOBS = 'JOBS',
-	EDUCATION = 'EDUCATION',
-	SKILLS = 'SKILLS',
-	GALLERY = 'GALLERY'
+export enum ROUTES {
+	ABOUT_ME = 'about-me',
+	JOBS = 'jobs',
+	EDUCATION = 'education',
+	SKILLS = 'skills',
+	GALLERY = 'gallery'
 }
 
-export const routes: { [key in ROUTE_NAMES]: { text: string; link: string } } = {
-	[ROUTE_NAMES.ABOUT_ME]: { text: 'ROUTES.ABOUT_ME', link: 'about-me' },
-	[ROUTE_NAMES.JOBS]: { text: 'ROUTES.JOBS', link: 'jobs' },
-	[ROUTE_NAMES.EDUCATION]: { text: 'ROUTES.EDUCATION', link: 'education' },
-	[ROUTE_NAMES.SKILLS]: { text: 'ROUTES.SKILLS', link: 'skills' },
-	[ROUTE_NAMES.GALLERY]: { text: 'ROUTES.GALLERY', link: 'gallery' }
+export const routes: { [key in ROUTES]: { text: string } } = {
+	[ROUTES.ABOUT_ME]: { text: 'ROUTES.ABOUT_ME' },
+	[ROUTES.JOBS]: { text: 'ROUTES.JOBS' },
+	[ROUTES.EDUCATION]: { text: 'ROUTES.EDUCATION' },
+	[ROUTES.SKILLS]: { text: 'ROUTES.SKILLS' },
+	[ROUTES.GALLERY]: { text: 'ROUTES.GALLERY' }
 };

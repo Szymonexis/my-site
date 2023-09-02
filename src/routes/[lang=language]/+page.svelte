@@ -4,7 +4,7 @@
 
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { routes } from '$lib';
+	import { ROUTES } from '$lib';
 
 	const { lang } = $page.params;
 
@@ -37,7 +37,7 @@
 	}, intervalTime);
 
 	function onMeetMeClick(): void {
-		goto([lang, routes.ABOUT_ME.link].join('/'));
+		goto([lang, ROUTES.ABOUT_ME].join('/'));
 	}
 </script>
 

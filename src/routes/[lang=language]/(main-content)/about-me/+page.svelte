@@ -3,24 +3,12 @@
 	import mBankLogo from '$lib/assets/mBank-logo.png';
 	import wppLogo from '$lib/assets/WPP-logo.svg';
 	import TranslateText from '$lib/components/translate-text.svelte';
-	import { routes } from '$lib/routes';
+	import { ROUTES, routes } from '$lib/routes';
 	import { page } from '$app/stores';
 	import { capitalize } from '$lib';
+	import { links } from './page.model';
 
 	const { lang } = $page.params;
-
-	const links = {
-		github: { link: 'https://github.com/Szymonexis', text: 'ABOUT_ME.LINKS.GITHUB' },
-		thisSite: { link: 'https://github.com/Szymonexis/my-site', text: 'ABOUT_ME.LINKS.GITHUB' },
-		linkedIn: {
-			link: 'https://www.linkedin.com/in/szymon-kaszuba-ga%C5%82ka-394599200/',
-			text: 'ABOUT_ME.LINKS.LINKEDIN'
-		},
-		mBank: { link: 'https://www.mbank.pl/en/about-us/about-mbank/', text: 'ABOUT_ME.LINKS.MBANK' },
-		digimonkeys: { link: 'http://digimonkeys.com/', text: 'ABOUT_ME.LINKS.DIGIMONKEYS' },
-		wpp: { link: 'https://www.wpp.com/', text: 'ABOUT_ME.LINKS.WPP' },
-		drHaircare: { link: 'https://dr-haircare.pl/', text: 'ABOUT_ME.LINKS.DRHAIRCARE' }
-	};
 
 	function getSinceYears(): number {
 		const softwareDeveloperStartTimestamp = new Date(2021, 5).getTime();
@@ -119,8 +107,8 @@
 
 <p>
 	<TranslateText key="ABOUT_ME.TEXTS.12" {lang} />
-	<a href={routes.JOBS.link}>
-		<TranslateText key={routes.JOBS.text} {lang} transformTextFunction={capitalize} />
+	<a href={ROUTES.JOBS}>
+		<TranslateText key={routes.jobs.text} {lang} transformTextFunction={capitalize} />
 	</a>
 	<TranslateText key="ABOUT_ME.TEXTS.13" {lang} />
 </p>
