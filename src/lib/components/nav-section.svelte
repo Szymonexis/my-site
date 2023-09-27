@@ -4,6 +4,7 @@
 	export let id = '0';
 	export let text = '';
 	export let link = '';
+	export let selected = false;
 
 	let currentText = text;
 	const letters = 'ABCDEFGHIJKLMNOPRSTUWVXYZ';
@@ -52,7 +53,7 @@
 
 <a
 	{id}
-	class="nav-section"
+	class="nav-section {selected ? 'nav-section--selected' : ''}"
 	href={link}
 	on:mouseenter={() => onMouseEnter(aTag)}
 	on:mouseleave={() => onMouseLeave()}
@@ -70,8 +71,12 @@
 		text-transform: uppercase;
 		user-select: none;
 		border-radius: 1rem;
-		text-decoration: underline;
+		text-decoration: none;
 		text-underline-offset: 3px;
 		cursor: pointer;
+
+		&--selected {
+			text-decoration: underline;
+		}
 	}
 </style>

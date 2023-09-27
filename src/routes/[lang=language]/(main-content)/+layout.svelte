@@ -11,12 +11,11 @@
 	import type { SelectDetail } from '$lib/types';
 
 	const { lang } = $page.params;
-
+	$: currentPath = $page.url.pathname;
 	const languages = Object.values(LANG);
 
 	function onSelectLanguage(event: CustomEvent<SelectDetail<string>>): void {
 		const newLang = event.detail.selectedValue as LANG;
-		const currentPath = $page.url.pathname;
 		const newPath = currentPath.replace(lang, newLang);
 
 		const thisPage = window.location;
@@ -52,7 +51,12 @@
 	<div class="navigation">
 		{#each Object.entries(routes) as route, i (i)}
 			{#await translate(route[1].text, lang, {}) then text}
-				<NavSection {text} link={route[0]} id={`${i}`} />
+				<NavSection
+					{text}
+					link={route[0]}
+					id={`${i}`}
+					selected={route[0] === currentPath.split('/')[2]}
+				/>
 			{/await}
 		{/each}
 	</div>

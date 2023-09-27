@@ -50,7 +50,7 @@ export const jobs: Job[] = [
 	{
 		name: 'Digimonkeys.com sp. z o.o.',
 		startDate: new Date(2022, 2),
-		endDate: new Date(),
+		endDate: new Date(0),
 		position: 'Full Stack Developer - Frontend Heavy',
 		technologies: [
 			{ name: 'React-Native', level: 70 },
@@ -73,7 +73,7 @@ export const jobs: Job[] = [
 	{
 		name: 'WPP plc - Wavemaker',
 		startDate: new Date(2022, 5),
-		endDate: new Date(),
+		endDate: new Date(0),
 		position: 'Frontend Developer',
 		technologies: [
 			{ name: 'Angular 2+', level: 100 },
